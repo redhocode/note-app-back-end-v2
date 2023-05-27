@@ -1,17 +1,23 @@
 {
-  "name": "note-app-back-end-hapi",
+  "name": "note-app-back-end-v2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./src/server.js",
-    "lint": "eslint /src"
+    "start-prod": "NODE_ENV=production node ./src/server.js",
+    "start-dev": "nodemon ./src/server.js",
+    "lint": "eslint ./src",
+    "migrate": "node-pg-migrate"
   },
   "author": "Redhocode",
   "license": "ISC",
   "dependencies": {
     "@hapi/hapi": "^21.3.2",
-    "nanoid": "^3.3.6"
+    "dotenv": "^16.0.3",
+    "joi": "^17.9.2",
+    "nanoid": "^3.3.6",
+    "node-pg-migrate": "^6.2.2",
+    "pg": "^8.11.0"
   },
   "devDependencies": {
     "eslint": "^8.39.0",
